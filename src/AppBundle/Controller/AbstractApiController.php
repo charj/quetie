@@ -5,7 +5,7 @@ namespace AppBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class AbstractApiController extends Controller
+abstract class AbstractApiController extends Controller
 {
     /**
      * @param array $content
