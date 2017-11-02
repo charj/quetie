@@ -14,4 +14,10 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /vendor/
+*/vendor/*
+.idea/*
 /web/bundles/
+
+packages/charj/quetie/vendor/
+
+\.idea/
