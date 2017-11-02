@@ -1,5 +1,11 @@
 {
-    "name": "cj/quethings",
+    "name": "charlie.fyi/quethings",
+     "authors" : [
+         {
+             "name": "Charlie Jennings",
+             "email": "dev@charlie.fyi"
+         }
+     ],
     "license": "proprietary",
     "type": "project",
     "autoload": {
