@@ -1,0 +1,10 @@
+services:
+    charj.queue.task.email.command:
+        class: Charj\QueueBundle\Command\Task\ReportCommand
+        tags:
+            - { name: console.command }
+
+    charj.queue.task.report.command:
+        class: Charj\QueueBundle\Command\Task\ReportCommand
+        tags:
+            - { name: console.command }
