@@ -18,6 +18,10 @@
 .idea/*
 /web/bundles/
 
-packages/charj/quetie/vendor/
+packages/charj/queue-bundle/vendor/
 
 \.idea/
+
+composer\.lock
+
+*.lock
