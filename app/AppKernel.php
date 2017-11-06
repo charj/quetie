@@ -3,6 +3,10 @@
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
+require_once __DIR__ . '../../vendor/autoload.php';
+
+ini_set('memory_limit', '128M');
+
 class AppKernel extends Kernel
 {
     public function registerBundles()
@@ -16,6 +20,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new \Aws\Symfony\AwsBundle(),
+            new \Charj\QueueBundle\QueueBundle(),
+            // new \Charj\CarBundle\CarBundle(),
             new AppBundle\AppBundle(),
         ];
 
