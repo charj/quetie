@@ -1,0 +1,4 @@
+services:
+    charj_queue.broker:
+        class: Charj\QueueBundle\Broker\Broker
+        arguments: ['@charj_queue.consmer.sqs']

@@ -1,0 +1,10 @@
+services:
+    charj.queue.task.email:
+        class: Charj\QueueBundle\Task\EmailTaskMessage
+        calls:
+          - [setCommand, ['@charj.queue.task.email.command']]
+
+    charj.queue.task.report:
+        class: Charj\QueueBundle\Task\ReportTaskMessage
+        calls:
+          - [setCommand, ['@charj.queue.task.report.command']]

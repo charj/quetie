@@ -1,0 +1,6 @@
+imports:
+    - { resource: broker.yml }
+    - { resource: consumer.yml }
+    - { resource: queue_command.yml }
+    - { resource: task.yml }
+    - { resource: task_command.yml }

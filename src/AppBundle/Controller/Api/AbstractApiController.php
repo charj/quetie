@@ -13,7 +13,10 @@ abstract class AbstractApiController extends Controller
      *
      * @return Response
      */
-    private function jsonResponse(array $content = [], int $statusCode = Response::HTTP_OK) : Response
+    public function jsonResponse(
+        array $content = [],
+        int $statusCode = Response::HTTP_OK
+    ) : Response
     {
         return new Response(
             json_encode($content),

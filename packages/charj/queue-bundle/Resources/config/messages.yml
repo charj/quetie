@@ -1,0 +1,5 @@
+charj_queue.message.report:
+    class: Charj\QueueBundle\Message\ReportCommandMessage
+    arguments: ['@charj_queue.command.report_generator']
+    calls:
+        - [setCommand, ['@charj_queue.command.report_generator']]

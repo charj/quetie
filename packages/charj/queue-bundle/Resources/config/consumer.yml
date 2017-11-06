@@ -1,0 +1,4 @@
+services:
+    charj_queue.consmer.sqs:
+        class: Charj\QueueBundle\Consumer\SqsConsumer
+        arguments: ['@Aws\Sqs\SqsClient']

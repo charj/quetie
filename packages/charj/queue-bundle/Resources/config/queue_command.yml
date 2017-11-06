@@ -1,0 +1,18 @@
+services:
+  charj.queue.worker:
+        class: Charj\QueueBundle\Command\Queue\QueueWorker
+        arguments: ['@charj_queue.consmer.sqs']
+        tags:
+              - { name: console.command }
+
+  charj.queue.purger:
+        class: Charj\QueueBundle\Command\Queue\QueuePurger
+        arguments: ['@charj_queue.consmer.sqs']
+        tags:
+              - { name: console.command }
+
+  charj.queue.debuger:
+        class: Charj\QueueBundle\Command\Queue\QueueDebugger
+        arguments: ['@charj_queue.consmer.sqs']
+        tags:
+              - { name: console.command }

@@ -44,7 +44,7 @@ class AbstractTaskMessage
      *
      * @return AbstractTaskMessage
      */
-    public function setArguments($arguments)
+    public function setArguments($arguments) : AbstractTaskMessage
     {
         $this->arguments = $arguments;
 
@@ -52,9 +52,9 @@ class AbstractTaskMessage
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getOptions()
+    public function getOptions() : array
     {
         return $this->arguments;
     }
