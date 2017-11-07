@@ -1,0 +1,17 @@
+{
+    "name": "charj/queue-bundle",
+    "description": "Another queue system",
+    "type": "library",
+    "require": {
+        "aws/aws-sdk-php-symfony": "^1.3"
+    },
+    "require-dev": {
+        "aws/aws-sdk-php-symfony": "^1.3"
+    },
+    "authors": [
+        {
+            "name": "Charlie J",
+            "email": "charliefjennings@gmail.com"
+        }
+    ]
+}

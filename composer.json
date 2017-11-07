@@ -15,10 +15,14 @@
             }
         }
     ],
+    "autoload": {
+        "psr-4": { "": "src/" },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+    },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "Charj\\QueueBundle\\": "/packages/charj/queue-bundle/"
+            "Charj\\QueueBundle\\": "packages/charj/queue-bundle/"
         },
         "files": [
             "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
@@ -28,6 +32,7 @@
     "require": {
         "php": ">=5.5.9",
         "charj/queue-bundle": "*",
+        "aws/aws-sdk-php-symfony": "~1.0",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
         "fzaninotto/faker": "^1.7",
