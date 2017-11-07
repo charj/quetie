@@ -21,8 +21,9 @@ It's intention is to be *cute*, as in use a small footprint and be small chunks 
 + Success!
 
 #### Todo
-
++ How can I run multiple workers? - Not sure how the dev infrasturcure will work here.
++ Log when commands fail - at the moment they will be deleted regardless so I assume success.
 + Add Logger task, for example so I can log an exception and not interrupt api responses.
-+ Email task, twig templating and variables + emogrifier for CSS
++ Email task, twig templating and variables + emogrifier for CSS.
 + Benchmarking, how fast is it?
 + Rethink naming of classes. Can it be clearer?
