@@ -38,6 +38,7 @@ class QueueWorker extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $queueName = $this->requireQueueName($input);
+        $queueUrl = $this->sqsConsumer->getQueueUrl($queueName);
         $this->sqsConsumer->createQueue($queueName);
         $messages = $this->sqsConsumer->receiveMessages($queueName);
 
@@ -50,14 +51,13 @@ class QueueWorker extends Command
         }
 
         foreach ($messages as $message) {
-            $message = json_decode($message['Body'], true);
-            $command = $this->getApplication()->find($message['command']);
-            $arrayInput['command'] = $message['command'];
-            $arrayInput[] = $message['arguments'];
+            $messageBody = json_decode($message['Body'], true);
 
-            $commandInput = new ArrayInput($message['arguments']);
+            $commandInput = new ArrayInput($messageBody['arguments']);
+            $command = $this->getApplication()->find($messageBody['command']);
             $command->run($commandInput, $output);
-            unset($commandInput,$message, $command);
+
+            $this->sqsConsumer->deleteMessage($queueUrl, $message['ReceiptHandle']);
         }
     }
 }

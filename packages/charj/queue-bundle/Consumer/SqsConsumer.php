@@ -71,6 +71,14 @@ class SqsConsumer
         ])->get('QueueUrl');
     }
 
+    public function deleteMessage($url, $receiptHandle)
+    {
+        return $this->sqsClient->deleteMessage([
+            'QueueUrl' => $url,
+            'ReceiptHandle' => $receiptHandle
+        ]);
+    }
+
 
     /**
      * @param $url
